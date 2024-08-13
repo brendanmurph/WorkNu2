@@ -12,31 +12,25 @@
   <header class="bg-hero-image bg-cover bg-center h-screen">
    <nav class="flex justify-between items-center w-[92%]  mx-auto py-2">
             <div>
-                <img class="w-10 cursor-pointer" src="../images/icons8-weight-64.png" alt="...">
+               <a href="#"><img class="w-10 cursor-pointer" src="../images/icons8-weight-64.png" alt="..."></a>
             </div>
             <div
-                class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 justify-center bg-slate-400">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-white">
+                class="nav-links duration-700 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 justify-center bg-slate-400">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6 text-white text-center">
                     <li>
-                        <a class="hover:text-gray-500" href="#">Products</a>
+                        <a class="hover:text-gray-500" href="#">Why we do it</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Solution</a>
+                        <a class="hover:text-gray-500" href="#">Kettlebells</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Resource</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="#">Developers</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="#">Pricing</a>
+                        <a class="hover:text-gray-500" href="#">Clothing</a>
                     </li>
                 </ul>
             </div>
       <div class="flex items-center gap-6">
-        <button class="text-white px-2 py-2 rounded-full hover:bg-blue-800">Sign In</button>
-        <ion-icon onclick="onToggleMenu(this)" name="menu" size="small" class="bg-white text-3xl cursor-pointer md:hidden"></ion-icon>
+        <button class="text-white px-2 py-2 rounded-full">Sign In</button>
+        <ion-icon onclick="onToggleMenu(this)" name="menu" size="small" class="text-3xl cursor-pointer md:hidden ion-icon"></ion-icon>
       </div>
     </nav>
       <section class="flex items-center justify-center flex-col h-1/3">
@@ -90,7 +84,7 @@
   const navLinks = document.querySelector('.nav-links') 
   function onToggleMenu(e) {
     e.name = e.name === 'menu' ? 'close' : 'menu'
-    navLinks.classList.toggle('top-[9%]')
+    navLinks.classList.toggle('top-[0%]')
   }
 </script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
