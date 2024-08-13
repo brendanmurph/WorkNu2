@@ -1,1 +1,1 @@
-This is an ecommerce web example built with HTML Tailwind and Javascript
+This is an ecommerce web example built with HTML Tailwind and Javascript. Ill be making regular contributions for the rest of 2024 and hope to have this site done nefore the new year.
