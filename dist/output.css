@@ -653,6 +653,9 @@ video {
   width: 92%;
 }
 
+.w-\[\] {
+  width: ;
+}
 
 .w-\[94\] {
   width: 94;
@@ -684,6 +687,10 @@ video {
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-\[95\%\] {
+  width: 95%;
 }
 
 .max-w-md {
@@ -850,6 +857,11 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold {
