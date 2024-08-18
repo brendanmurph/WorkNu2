@@ -12,7 +12,7 @@ ion-icon {
         background-color: transparent;
     }
 }
-@media (max-width:683px) {
+@media (max-width:767px) {
     .hero-image {
         background-image: url(../images/heroimage\ 1.jpg);
     }
