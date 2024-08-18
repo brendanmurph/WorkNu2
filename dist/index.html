@@ -6,92 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  
-    <title>Spartan Fitness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Spartn.</title>
 </head>
 <body class="bg-black">
-  <header class="bg-hero-image bg-cover bg-center h-screen">
+  <header class="bg-hero-image bg-cover bg-center h-screen hero-image">
    <nav class="flex justify-between items-center w-[92%]  mx-auto py-2">
             <div>
-               <a href="#"><img data-aos="zoom-in" data-aos-duration="1000" class="w-10 cursor-pointer" src="../images/icons8-weight-64.png" alt="..."></a>
+               <a href="#"><img class="w-24 pt-2 cursor-pointer " src="../images/Spartn..svg" alt="..."></a>
             </div>
             <div
-                class="nav-links duration-700 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 justify-center md:bg-none bg-slate-400">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6 text-white text-center text-lg">
+                class="nav-links duration-700 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 justify-center">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6 text-white text-center text-lg font-museo">
                     <li>
-                        <a class="hover:text-gray-500" href="https://www.example.com">Company</a>
+                        <a class="hover:text-gray-500" href="https://www.example.com">Company Page</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="https://www.example.com">Kettlebells</a>
+                        <a class="hover:text-gray-500" href="https://www.example.com">Product Page</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="https://www.example.com">Clothing</a>
+                        <a class="hover:text-gray-500" href="https://www.example.com">Blog page</a>
                     </li>
                 </ul>
             </div>
       <div class="flex items-center gap-6">
-        <button data-aos="zoom-in" data-aos-duration="1000" class="text-white px-2 py-2 rounded-full text-lg">Sign In</button>
-        <ion-icon onclick="onToggleMenu(this); hide(); hideProf()" name="menu" size="small" class="text-3xl cursor-pointer md:hidden ion-icon"></ion-icon>
+        <button class="text-white px-2 py-2 rounded-full text-lg font-museo font-bold">Sign In</button>
+        <ion-icon onclick="onToggleMenu(this); hide();" name="menu" size="small" class="text-3xl cursor-pointer md:hidden ion-icon"></ion-icon>
       </div>
     </nav>
-      <section id="tagline" class="flex items-center justify-center flex-col h-1/3">
-            <h1 class="text-white text-3xl font-bold" data-aos="zoom-in" data-aos-duration="1000">Spartan Fitness</h1>
-            <h2 class="text-white text-lg py-2 mb-10" data-aos="zoom-in" data-aos-duration="3000">Unlock Your Inner Warrior</h2>
+      <section id="tagline" class="flex items-center justify-center flex-col h-36">
+            <h1 class="text-white text-3xl md:text-5xl lg:6xl font-bold font-museo mt-60" data-aos="zoom-in" data-aos-duration="1000">Header</h1>
+            <h2 class="text-white text-lg py-2 mb-6 font-poppins" data-aos="zoom-in" data-aos-duration="3000">Marketing message</h2>
+            <button class="py-2 px-6 bg-white rounded-md">call to action</button>
       </section>
     </header>
 
-    <section class="p-8 md:p-24 lg:p-32 text-center md:text-left lg:text-left" data-aos="fade-zoom-in" data-aos-duration="2000">
-      <main class="bg-white p-6 rounded-lg">
-        <h2 class="text-3xl text-black pb-4">Lorem ipsum dolor sit.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae ratione placeat dolorem repellendus culpa corporis a accusamus. Laudantium possimus, aperiam saepe consequatur nisi unde ea debitis delectus est excepturi, sint velit repellendus vel dolorum minima libero nulla explicabo. Odio?"</p>
+    <section class="pb-6 mb-4 px-8 md:p-24 lg:px-14 text-center md:text-left lg:text-left" data-aos="fade-zoom-in" data-aos-duration="2000">
+      <main class="text-white pb-6 rounded-lg">
+        <h2 class="text-3xl text-black pb-4 font-museo">Lorem ipsum dolor sit.</h2>
+        <p class="font-poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti voluptatum saepe ab, facilis illo ut animi ex aliquid culpa? "</p>
         <p class="mt-5">- Lorem</p>
       </main>
     </section>
-    <section data-aos="zoom-in" data-aos-duration="2000" class="flex flex-col md:flex-row items-center md:items-start">
-      <img src="../images/jan-gunnar-nygard-10FlDY7YBWo-unsplash 1 (1).jpg" alt="" class="">
-      <div class="ml-0 md:ml-6 mt-4 md:mt-0 text-center md:text-left">
-        <h2 class="text-white text-3xl mt-8 px-10">Kettlebells</h2>
-        <p class="text-white md:pr-8 mt-2 px-10 lg:pr-36">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed minus quisquam eos eveniet maxime ut id placeat temporibus illo eaque.</p>
-        <button class="p-2 bg-white rounded-md mt-6 ml-10 mr-10">Check em' out</button>
-      </div>
+
+
+
+    <!--Forged in Fire-->
+<section class="bg-image10 bg-cover bg-center h-screen image8">
+
+</section>
+
+    <!--Forged in Fire end-->
+
+
+    <!--product section start-->
+    <section>
+        <div class="swiper mt-14">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <section class="relative flex flex-col md:flex-row items-center md:items-start">
+                <img src="../images/image2.jpg" alt="" class="" data-aos="fade-right" data-aos-duration="2000">
+                <div class="md:w-1/2 md:flex md:items-center text-left md:pl-10">
+                    <div class="mt-4 md:mt-0 px-10">
+                        <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-museo font-bold" data-aos="fade-right" data-aos-duration="2000">Example Collection</h2>
+                        <button class="p-2 bg-white rounded-md mt-6 font-poppins" data-aos="fade-right" data-aos-duration="2000">GO TO EXAMPLE COLLECTION</button>
+                    </div>
+                </div>
+              </section>
+            </div>
+            <div class="swiper-slide">
+              <section class="relative flex flex-col md:flex-row items-center md:items-start">
+                <img src="../images/image2.jpg" alt="" class="" data-aos="fade-right" data-aos-duration="2000">
+                <div class="md:w-1/2 md:flex md:items-center text-left md:pl-10">
+                    <div class="mt-4 md:mt-0 px-10">
+                        <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-museo font-bold" data-aos="fade-right" data-aos-duration="2000">Example Collection</h2>
+                        <button class="p-2 bg-white rounded-md mt-6 font-poppins" data-aos="fade-right" data-aos-duration="2000">GO TO EXAMPLE COLLECTIONB</button>
+                    </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next" ></div>
+        </div>
     </section>
-    <section data-aos="zoom-in" data-aos-duration="2000" class="flex flex-col md:flex-row items-center md:items-start">
-      <div class="ml-0 md:ml-6 mt-4 md:mt-0 text-center md:text-left">
-        <h2 class="text-white text-3xl mt-8 px-10">Kettlebells</h2>
-        <p class="text-white md:pr-8 mt-2 px-10 lg:pr-36">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed minus quisquam eos eveniet maxime ut id placeat temporibus illo eaque.</p>
-        <button class="p-2 bg-white rounded-md mt-6 ml-10 mr-10">Check em' out</button>
-      </div>
-      <img src="../images/jan-gunnar-nygard-10FlDY7YBWo-unsplash 1 (1).jpg" alt="" class="">
-    </section>
+    <!--product section end--> 
+
     
-    
+    <img src="../images/image1.jpg" alt="" class="mt-28">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
+var swiper = new Swiper('.swiper', {
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  loop: true,
+});
+
   const navLinks = document.querySelector('.nav-links')
   function onToggleMenu(e) {
     e.name = e.name === 'menu' ? 'close' : 'menu'
@@ -107,9 +127,6 @@
     }
   
 </script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
 </script>

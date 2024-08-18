@@ -1,8 +1,27 @@
 ion-icon {
     color:#fff;
 }
+.swiper-button-next::after {
+    color:#fff
+}
+.swiper-button-prev::after {
+    color:#fff
+}
 @media (min-width:767.97px) {
     .nav-links {
-        background-color: black;
+        background-color: transparent;
     }
+}
+@media (max-width:683px) {
+    .hero-image {
+        background-image: url(../images/heroimage\ 1.jpg);
+    }
+  
+}
+@media (min-width:683px) {
+    .image8 {
+        background-image: url(../images/image8.jpg);
+    }
+  
+  
 }
