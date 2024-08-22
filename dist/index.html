@@ -20,7 +20,7 @@
                     <a href="#"><img class="w-24 pt-2 cursor-pointer " src="../images/Spartn..svg" alt="..."></a>
                  </div>
                  <div
-                     class="nav-links duration-700 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 justify-center">
+                     class="nav-links duration-700 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 justify-center bg-slate-500">
                      <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6 text-white text-center text-lg font-museo font-bold">
                          <li>
                              <a class="hover:text-gray-500" href="https://www.example.com">Company</a>
@@ -41,9 +41,9 @@
              <ion-icon onclick="onToggleMenu(this); hide();" name="menu" size="small" class="text-3xl cursor-pointer md:hidden ion-icon"></ion-icon>
            </div>
          </nav>
-           <section id="tagline" class="flex items-center md:items-start md:pl-40 sm:mb-24 justify-center flex-col h-28">
+           <section id="tagline" class="flex items-center md:items-start md:pl-64 sm:mb-24 justify-center flex-col h-28">
                  <h1 class="text-white text-4xl sm:text-6xl md:text-8xl lg:8xl font-bold font-museo mt-60" data-aos="zoom-in" data-aos-duration="1000">Header</h1>
-                 <h2 class="text-white text-lg md:text-2xl py-2 mb-2 font-poppins" data-aos="zoom-in" data-aos-duration="3000">Marketing message</h2>
+                 <h2 class="text-white text-lg md:text-2xl py-2 mb-2 font-poppins" data-aos="zoom-in" data-aos-duration="3000">Tagline</h2>
                  <button class="py-2 px-2 md:py-3 md:px-3 bg-white rounded-md font-bold" data-aos="zoom-in" data-aos-duration="3000">Call to action</button>
            </section>
          </header>
@@ -64,8 +64,8 @@
 </section>
 <!--Forged in Fire end-->
 <!--product section start-->
-<section>
-  <div class="swiper mt-14">
+<section class="">
+  <div class="swiper mt-10 mb-10">
       <div class="swiper-wrapper">
           <div class="swiper-slide">
               <section class="relative flex flex-col items-center justify-center text-center md:flex-row md:justify-center md:items-center">
@@ -93,7 +93,47 @@
 <!--product section end-->
 
 
-<img src="../images/image1.jpg" alt="" class="mt-28">
+<img src="../images/image1.jpg" alt="" class="">
+<!--Footer-->
+<footer class="bg-slate-500">
+  <div class="flex flex-col items-center md:flex-row md:justify-around ml-4">
+    <!-- Company Section -->
+    <div class="p-4">
+      <div class="flex items-center cursor-pointer" onclick="toggleDropdown('company-dropdown', 'company-arrow')">
+        <h3 class="text-white font-bold md:text-2xl text-lg mt-2">
+          Company
+        </h3>
+        <ion-icon id="contact-arrow"name="chevron-down-outline"  class="text-white text-lg ml-2 mt-2 transition-transform"></ion-icon>
+      </div>
+      <div id="company-dropdown" class="hidden text-center md:text-left">
+        <p class="text-white md:text-lg mt-1">About</p>
+        <p class="text-white md:text-lg">Product</p>
+        <p class="text-white md:text-lg">Collection</p>
+        <p class="text-white md:text-lg">Blog</p>
+        <p class="text-white md:text-lg">Affiliates</p>
+      </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="p-4">
+      <div class="flex items-center cursor-pointer" onclick="toggleDropdown('contact-dropdown', 'contact-arrow')">
+        <h3 class="text-white font-bold md:text-2xl text-lg mt-2">
+          Contact Us
+        </h3>
+      <ion-icon id="contact-arrow"name="chevron-down-outline"  class="text-white text-lg ml-2 mt-2 transition-transform"></ion-icon>
+      </div>
+      <div id="contact-dropdown" class="hidden text-center md:text-left">
+        <p class="text-white md:text-lg mt-1">Submit a ticket</p>
+        <p class="text-white md:text-lg">Call us (999-999-999)</p>
+        <p class="text-white md:text-lg">Track your order</p>
+        <p class="text-white md:text-lg">Leave a review</p>
+      </div>
+    </div>
+  </div>
+  <p class="text-white flex justify-center font-bold font-museo mt-7 text-xs">SPARTN.<span class="ml-2">&copy;2024</span></p>
+</footer>
+<!--Footer end-->
+  
 
 
 
@@ -105,14 +145,16 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('bg-gray-800', 'shadow-md');
-    } else {
-        navbar.classList.remove('bg-gray-800', 'shadow-md');
-    }
-});
+  function toggleDropdown(dropdownId, arrowId) {
+    const dropdown = document.getElementById(dropdownId);
+    const arrow = document.getElementById(arrowId);
+    
+    dropdown.classList.toggle('hidden');
+    
+    // Rotate the arrow icon
+    arrow.classList.toggle('transform');
+    arrow.classList.toggle('rotate-180');
+  }
 var swiper = new Swiper('.swiper', {
   navigation: {
       nextEl: '.swiper-button-next',

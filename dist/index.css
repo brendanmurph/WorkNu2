@@ -22,6 +22,14 @@ ion-icon {
     .image8 {
         background-image: url(../images/image8.jpg);
     }
-  
-  
+}
+
+@media (min-width:767px) {
+    #contact-arrow {
+        display: none;
+    }
+    .hidden {
+        display: block;
+    }
+
 }
