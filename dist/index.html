@@ -16,11 +16,11 @@
 <body class="bg-black">
     <header class="bg-hero-image bg-cover bg-center h-screen hero-image">
         <nav class="flex justify-between items-center w-[92%]  mx-auto py-2">
-                 <div>
+                 <h1>
                     <a href="#"><img class="w-24 pt-2 cursor-pointer " src="../images/Spartn..svg" alt="..."></a>
-                 </div>
+                 </h1>
                  <div
-                     class="nav-links duration-700 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 justify-center bg-slate-500">
+                     class="nav-links duration-700 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 justify-center ">
                      <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6 text-white text-center text-lg font-museo font-bold">
                          <li>
                              <a class="hover:text-gray-500" href="https://www.example.com">Company</a>
@@ -41,29 +41,13 @@
              <ion-icon onclick="onToggleMenu(this); hide();" name="menu" size="small" class="text-3xl cursor-pointer md:hidden ion-icon"></ion-icon>
            </div>
          </nav>
-           <section id="tagline" class="flex items-center md:items-start md:pl-64 sm:mb-24 justify-center flex-col h-28">
-                 <h1 class="text-white text-4xl sm:text-6xl md:text-8xl lg:8xl font-bold font-museo mt-60" data-aos="zoom-in" data-aos-duration="1000">Header</h1>
-                 <h2 class="text-white text-lg md:text-2xl py-2 mb-2 font-poppins" data-aos="zoom-in" data-aos-duration="3000">Tagline</h2>
-                 <button class="py-2 px-2 md:py-3 md:px-3 bg-white rounded-md font-bold" data-aos="zoom-in" data-aos-duration="3000">Call to action</button>
+           <section id="tagline" class="flex items-center md:mt-20 sm:mb-24 justify-center flex-col h-28">
+                 <h1 class="text-white text-4xl sm:text-4xl md:text-5xl lg:8xl font-bold font-museo mt-52" data-aos="zoom-in" data-aos-duration="1000">The afterhours</h1>
+                 <h2 class="text-white font-poppins md:text-2xl">Limited edition kettlebell</h2>
+                 <button class="py-2 px-2 md:py-3 md:px-3 bg-white rounded-md font-bold mt-4" data-aos="zoom-in" data-aos-duration="3000">SHOP NOW</button>
            </section>
          </header>
- 
-<!--Quote-->
-  <section class="pb-6 mb-4 px-8 md:p-24 lg:px-14 text-center md:text-left lg:text-left" data-aos="fade-zoom-in" data-aos-duration="2000">
-    <main class="text-white pb-6 ">
-      <h2 class="text-3xl text-black pb-4 font-museo">Lorem ipsum dolor sit.</h2>
-      <p class="font-poppins">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, rerum vero saepe vel ipsa at unde quod cupiditate numquam modi repellendus maxime eveniet cum adipisci sunt enim odit impedit esse?"</p>
-      <p class="mt-5">- Lorem</p>
-    </main>
-  </section>
-<!--quote end-->
-<!--Forged in Fire-->
-<section class="bg-image10 bg-cover bg-center h-screen image8 flex flex-col items-end text-right sm:pr-16">
-<h2 class="text-white text-2xl xs:text-3xl sm:text-4xl md:text-5xl mt-48 mb-2 pr-7 font-museo font-bold">Lorem Ipsum</h2>
-<p class="text-white text-md sm:text-xl md:text-2xl pl-12 pr-7 xs:pl-40 sm:pl-48 md:pl-36 lg:pl-96 font-poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, debitis. Culpa commodi</p>
-</section>
-<!--Forged in Fire end-->
-<!--product section start-->
+ <!--product section start-->
 <section class="">
   <div class="swiper mt-10 mb-10">
       <div class="swiper-wrapper">
@@ -72,7 +56,7 @@
                   <img src="../images/image2.jpg" alt="" class="md:w-1/2" data-aos="fade-right" data-aos-duration="2000">
                   <div class="md:w-1/2 md:flex md:flex-col md:items-center md:text-center mt-4 md:mt-0 px-10">
                       <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-museo font-bold" data-aos="fade-right" data-aos-duration="2000">Example Collection</h2>
-                      <button class="p-2 bg-white rounded-md mt-6 font-poppins" data-aos="fade-right" data-aos-duration="2000">GO TO EXAMPLE COLLECTION</button>
+                      <button class="p-2 bg-white rounded-md mt-6 font-poppins" data-aos="fade-right" data-aos-duration="2000">See the collection</button>
                   </div>
               </section>
           </div>
@@ -81,7 +65,7 @@
                   <img src="../images/image2.jpg" alt="" class="md:w-1/2" data-aos="fade-right" data-aos-duration="2000">
                   <div class="md:w-1/2 md:flex md:flex-col md:items-center md:text-center mt-4 md:mt-0 px-10">
                       <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-museo font-bold" data-aos="fade-right" data-aos-duration="2000">Example Collection</h2>
-                      <button class="p-2 bg-white rounded-md mt-6 font-poppins" data-aos="fade-right" data-aos-duration="2000">GO TO EXAMPLE COLLECTION</button>
+                      <button class="p-2 bg-white rounded-md mt-6 font-poppins" data-aos="fade-right" data-aos-duration="2000">See the collection</button>
                   </div>
               </section>
           </div>
@@ -91,16 +75,29 @@
   </div>
 </section>
 <!--product section end-->
+<!--Quote
+  <section class="pb-6 mb-4 px-8 md:p-24 lg:px-14 text-center md:text-left lg:text-left" data-aos="fade-zoom-in" data-aos-duration="2000">
+    <div class="text-white pb-6 ">
+      <h2 class="text-3xl text-black pb-4 font-museo">Lorem ipsum dolor sit.</h2>
+      <p class="font-poppins">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, rerum vero saepe vel ipsa at unde quod cupiditate numquam modi repellendus maxime eveniet cum adipisci sunt enim odit impedit esse?"</p>
+      <p class="mt-5">- Lorem</p>
+    </div>
+  </section>
+quote end-->
+<!--Forged in Fire-->
+<section class="bg-image10 bg-cover bg-center h-screen image8 flex flex-col items-end text-right sm:pr-16">
+<h2 class="text-white text-2xl xs:text-3xl sm:text-4xl md:text-5xl mt-48 mb-2 pr-7 font-museo font-bold">Lorem Ipsum</h2>
+<p class="text-white text-md sm:text-xl md:text-2xl pl-12 pr-7 xs:pl-40 sm:pl-48 md:pl-36 lg:pl-96 font-poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, debitis. Culpa commodi</p>
+</section>
+<!--Forged in Fire end-->
 
-
-<img src="../images/image1.jpg" alt="" class="">
 <!--Footer-->
-<footer class="bg-slate-500">
-  <div class="flex flex-col items-center md:flex-row md:justify-around ml-4">
+<footer class="">
+  <div class="flex flex-col items-center md:flex-row md:justify-around md:ml-32">
     <!-- Company Section -->
     <div class="p-4">
       <div class="flex items-center cursor-pointer" onclick="toggleDropdown('company-dropdown', 'company-arrow')">
-        <h3 class="text-white font-bold md:text-2xl text-lg mt-2">
+        <h3 class="text-white font-bold md:text-2xl text-lg md:mt-1">
           Company
         </h3>
         <ion-icon id="contact-arrow"name="chevron-down-outline"  class="text-white text-lg ml-2 mt-2 transition-transform"></ion-icon>
@@ -117,8 +114,8 @@
     <!-- Contact Us Section -->
     <div class="p-4">
       <div class="flex items-center cursor-pointer" onclick="toggleDropdown('contact-dropdown', 'contact-arrow')">
-        <h3 class="text-white font-bold md:text-2xl text-lg mt-2">
-          Contact Us
+        <h3 class="text-white font-bold md:text-2xl text-lg md:mt-2 md:pt-6">
+          Customer Service
         </h3>
       <ion-icon id="contact-arrow"name="chevron-down-outline"  class="text-white text-lg ml-2 mt-2 transition-transform"></ion-icon>
       </div>
@@ -127,9 +124,26 @@
         <p class="text-white md:text-lg">Call us (999-999-999)</p>
         <p class="text-white md:text-lg">Track your order</p>
         <p class="text-white md:text-lg">Leave a review</p>
+        <p class="text-white md:text-lg">Warranty</p>
+        <p class="text-white md:text-lg">Return Policy</p>
+      </div>
+    </div>
+ 
+    <!-- Account Section -->
+    <div class="p-4">
+      <div class="flex items-center cursor-pointer" onclick="toggleDropdown('account-dropdown', 'account-arrow')">
+        <h3 class="text-white font-bold md:text-2xl text-lg md:mt-2 md:pt-6">
+          Account
+        </h3>
+      <ion-icon id="account-arrow"name="chevron-down-outline"  class="text-white text-lg ml-2 mt-2 transition-transform md:hidden"></ion-icon>
+      </div>
+      <div id="account-dropdown" class="hidden text-center md:text-left">
+        <p class="text-white md:text-lg mt-1">Sign In</p>
+        <p class="text-white md:text-lg">Create an account</p>
       </div>
     </div>
   </div>
+   </div>
   <p class="text-white flex justify-center font-bold font-museo mt-7 text-xs">SPARTN.<span class="ml-2">&copy;2024</span></p>
 </footer>
 <!--Footer end-->

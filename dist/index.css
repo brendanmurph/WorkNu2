@@ -12,15 +12,15 @@ ion-icon {
         background-color: transparent;
     }
 }
-@media (max-width:767px) {
+@media (max-width:486px) {
     .hero-image {
-        background-image: url(../images/heroimage\ 1.jpg);
+        background-image: url(../images/image98.jpg);
     }
   
 }
 @media (min-width:683px) {
     .image8 {
-        background-image: url(../images/image8.jpg);
+        background-image: url(../images/image3.jpg);
     }
 }
 
