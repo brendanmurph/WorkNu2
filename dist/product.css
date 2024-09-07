@@ -1,0 +1,7 @@
+ion-icon {
+    color:#000000;
+}
+ul.breadcrumb li+li:before {
+    color: black;
+    content: "/\00a0";
+  }

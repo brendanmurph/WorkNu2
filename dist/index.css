@@ -36,3 +36,7 @@ ion-icon {
 #cube {
     color: green;
 }
+ul.breadcrumb li+li:before {
+    color: white;
+    content: "/\00a0";
+  }
