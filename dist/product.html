@@ -15,7 +15,7 @@
 </head>
 <body class="font-poppins">
     <header class="">
-       <nav class="flex justify-between items-center w-[92%] mx-auto py-2">
+       <nav class="flex justify-between items-center w-[92%] mx-auto py-6">
             <div>
                <a href="index.html"><img class="w-24 pt-2 cursor-pointer" src="../images/Spartn. blk.svg" alt="..."></a>
             </div>
@@ -33,8 +33,8 @@
                 </ul>
             </div>
             <div class="flex items-center gap-6">
-               <ion-icon class="" name="person-outline"></ion-icon>
-               <ion-icon class="" name="bag-outline" size="medium"></ion-icon>
+               <a><ion-icon class="text-xl" name="person-outline"></ion-icon></a>
+              <a href="./bag.html"> <ion-icon class="text-xl" name="bag-outline"></ion-icon></a>
                 <ion-icon onclick="onToggleMenu(this); hide();" name="menu" size="medium" class="text-3xl cursor-pointer md:hidden ion-icon"></ion-icon>
             </div>
         </nav>
@@ -45,8 +45,8 @@
     </ul>
 
     <div class="my-8 px-6 bg-gray-700 text-white ">
-        <p class="font-poppins text-sm xs:text-md md:text-xl p-6 md:text-center">
-            Free Shipping To The United States
+        <p class="font-poppins text-sm xs:text-md md:text-xl p-6 text-center">
+            Free Shipping Worldwide
         </p>
     </div>
    <div class="md:flex md:flex-row  flex flex-col items-center">
@@ -64,7 +64,7 @@
             <h2 class="text-white font-bold">VARIANT & QTY SELECTOR COMING SOON</h2>
         </div>
         <div class="flex justify-center mt-4 md:w-1/2">
-           <button id="readMoreBtn" class="mt-2 bg-gray-700 text-white py-4 px-10 rounded-lg hover:bg-gray-800">
+            <button id="addToBagBtn" class="mt-2 bg-gray-700 text-white py-4 px-10 rounded-lg hover:bg-gray-800">
                 Add to Bag
             </button>
         </div>
@@ -107,7 +107,37 @@
         btnText.textContent = "Read More...";
     }
 }
+// Product Data
+const product = {
+    id: 1,
+    name: "Product Name",
+    price: 40.00,
+    size: "M",
+    image: "../images/KB 3.png", // Example image
+    quantity: 1,
+};
 
+// Function to add product to cart (localStorage)
+function addToBag(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || []; // Retrieve existing cart or create new one
+    const existingProduct = cart.find(item => item.id === product.id);
+
+    if (existingProduct) {
+        // If product is already in the cart, update the quantity
+        existingProduct.quantity += 1;
+    } else {
+        // If product is not in the cart, add it
+        cart.push(product);
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart)); // Save updated cart to localStorage
+    alert('Product added to bag!');
+}
+
+// Event Listener for Add to Bag Button
+document.getElementById('addToBagBtn').addEventListener('click', () => {
+    addToBag(product);
+});
     </script>
     </body>
     
