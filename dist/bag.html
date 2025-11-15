@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Bag</title>
+  <title>Spartn.</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="index.css">
@@ -14,33 +14,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<header class="">
-    <nav class="flex justify-between items-center w-[92%] mx-auto py-6">
-         <div>
-            <a href="index.html"><img class="w-24 pt-2 cursor-pointer" src="../images/Spartn. blk.svg" alt="..."></a>
-         </div>
-         <div class="nav-links duration-700 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 justify-center bg-white">
-             <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6 text-center text-lg font-bold">
-                 <li>
-                     <a class="hover:text-gray-500" href="./company.html">Company Page</a>
-                 </li>
-                 <li>
-                     <a class="hover:text-gray-500" href="./collection.html">Collection</a>
-                 </li>
-                 <li>
-                     <a class="hover:text-gray-500" href="./product.html">Product</a>
-                 </li>
-             </ul>
-         </div>
-         <div class="flex items-center gap-6">
-             <ion-icon class="text-xl" name="person-outline"></ion-icon>
-             <ion-icon class="text-xl" name="bag-outline"></ion-icon>
-             <ion-icon onclick="onToggleMenu(this); hide();" name="menu" size="medium" class="text-3xl cursor-pointer md:hidden ion-icon"></ion-icon>
-         </div>
+<header class="font-poppins">
+    <nav class="flex justify-between items-center w-[92%]  mx-auto py-6">
+             <h1>
+                <a href="./index.html"><img class="w-24 pt-2 cursor-pointer " src="../images/Spartn. blk.svg" alt="..."></a>
+             </h1>
+             <div
+                 class="nav-links duration-700 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 justify-center bg-white">
+                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6 text-center text-lg font-bold">
+                     <li>
+                         <a class="hover:text-gray-500" href="./company.html">Company</a>
+                     </li>
+                     <li>
+                         <a class="hover:text-gray-500" href="./collection.html">Collection</a>
+                     </li>
+                     <li>
+                      <a class="hover:text-gray-500" href="./product.html">Product</a>
+                    </li>
+                 </ul>
+             </div>
+       <div class="flex items-center gap-6">
+        <a><ion-icon class="text-xl" name="person-outline"></ion-icon></a>
+          <a href="./bag.html"> <ion-icon class="text-xl" name="bag-outline"></ion-icon></a>
+         <ion-icon onclick="onToggleMenu(this); hide();" name="menu" size="medium" class="text-3xl cursor-pointer md:hidden ion-icon"></ion-icon>
+       </div>
      </nav>
- </header>
+     </header>
 <body class="font-poppins">
-
     <div class="container mx-auto py-8">
         <h1 class="text-3xl font-bold text-gray-800 mb-6 ml-4 text-center md:text-left">Your Bag</h1>
     
@@ -54,105 +54,92 @@
             <!-- Summary will be dynamically added here -->
         </div>
     </div>
-    
-    <script>
-    // Function to display cart items from localStorage
-    function displayCart() {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let bagItemsContainer = document.getElementById('bagItems');
-        let orderSummaryContainer = document.getElementById('orderSummary');
-        
-        if (cart.length === 0) {
-            bagItemsContainer.innerHTML = '<p>Your bag is empty.</p>';
-            orderSummaryContainer.innerHTML = '';
-            return;
-        }
-    
-        let itemsHTML = '';
-        let subtotal = 0;
-    
-        cart.forEach((product) => {
-            const totalPrice = product.price * product.quantity;
-            subtotal += totalPrice;
-            itemsHTML += `
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-4">
-                    <img src="${product.image}" alt="${product.name}" class="w-20 h-20 object-cover rounded-lg">
-                    <div>
-                        <h2 class="text-lg font-semibold text-gray-700">${product.name}</h2>
-                        <p class="text-gray-500">Size: ${product.size}</p>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <input type="number" value="${product.quantity}" min="1" class="w-16 p-2 border rounded-md" disabled>
-                    <p class="text-lg font-semibold text-gray-700">$${totalPrice.toFixed(2)}</p>
-                    <button class="text-red-500 hover:underline" onclick="removeFromBag(${product.id})">Remove</button>
-                </div>
-            </div>
-            `;
-        });
-    
-        // Update the DOM with the cart items
-        bagItemsContainer.innerHTML = itemsHTML;
-    
-        // Calculate Order Summary
-        const shipping = 0;
-        const tax = subtotal * 0.08; // Example tax of 8%
-        const total = subtotal + tax;
-    
-        // Update the DOM with the order summary
-        orderSummaryContainer.innerHTML = `
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Order Summary</h2>
-            <div class="flex justify-between mb-2">
-                <p class="text-gray-600">Subtotal</p>
-                <p class="text-gray-800">$${subtotal.toFixed(2)}</p>
-            </div>
-            <div class="flex justify-between mb-2">
-                <p class="text-gray-600">Shipping</p>
-                <p class="text-gray-800">$${shipping.toFixed(2)}</p>
-            </div>
-            <div class="flex justify-between mb-4">
-                <p class="text-gray-600">Tax</p>
-                <p class="text-gray-800">$${tax.toFixed(2)}</p>
-            </div>
-            <div class="flex justify-between font-semibold text-lg">
-                <p>Total</p>
-                <p>$${total.toFixed(2)}</p>
-            </div>
-            <button class="mt-6 w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600">
-                Checkout
-            </button>
-        `;
-    }
-    
-    // Function to remove item from cart
-    function removeFromBag(productId) {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart = cart.filter(product => product.id !== productId);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        displayCart(); // Refresh the cart display
-    }
-    
-    // Display cart items on page load
-    window.onload = displayCart;
-    
-    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>    
-    <script src="./company.js"></script>
+    <script src="./bag.js"></script>
     <script>
-        function toggleText() {
-    var moreText = document.getElementById("moreText");
-    var btnText = document.getElementById("readMoreBtn");
-
-    if (moreText.classList.contains("hidden")) {
-        moreText.classList.remove("hidden");
-        btnText.textContent = "Read Less...";
-    } else {
-        moreText.classList.add("hidden");
-        btnText.textContent = "Read More...";
+// Function to display cart items from localStorage
+function displayCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let bagItemsContainer = document.getElementById('bagItems');
+    let orderSummaryContainer = document.getElementById('orderSummary');
+    
+    if (cart.length === 0) {
+        bagItemsContainer.innerHTML = '<p>Your bag is empty.</p>';
+        orderSummaryContainer.innerHTML = '';
+        return;
     }
+
+    let itemsHTML = '';
+    let subtotal = 0;
+
+    cart.forEach((product) => {
+        const totalPrice = product.price * product.quantity;
+        subtotal += totalPrice;
+        itemsHTML += `
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="${product.image}" alt="${product.name}" class="w-20 h-20 object-cover rounded-lg">
+                <div>
+                    <h2 class="text-lg font-semibold text-gray-700">${product.name}</h2>
+                    <p class="text-gray-500">Size: ${product.size}</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <input type="number" value="${product.quantity}" min="1" class="w-16 p-2 border rounded-md" disabled>
+                <p class="text-lg font-semibold text-gray-700">$${totalPrice.toFixed(2)}</p>
+                <button class="text-red-500 text-xs hover:underline" onclick="removeFromBag(${product.id})">Remove</button>
+            </div>
+        </div>
+        `;
+    });
+
+    // Update the DOM with the cart items
+    bagItemsContainer.innerHTML = itemsHTML;
+
+    // Calculate Order Summary
+    const shipping = 0;
+    const tax = subtotal * 0.08; // Example tax of 8%
+    const total = subtotal + tax;
+
+    // Update the DOM with the order summary
+    orderSummaryContainer.innerHTML = `
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Order Summary</h2>
+        <div class="flex justify-between mb-2">
+            <p class="text-gray-600">Subtotal</p>
+            <p class="text-gray-800">$${subtotal.toFixed(2)}</p>
+        </div>
+        <div class="flex justify-between mb-2">
+            <p class="text-gray-600">Shipping</p>
+            <p class="text-gray-800">$${shipping.toFixed(2)}</p>
+        </div>
+        <div class="flex justify-between mb-4">
+            <p class="text-gray-600">Tax</p>
+            <p class="text-gray-800">$${tax.toFixed(2)}</p>
+        </div>
+        <div class="flex justify-between font-semibold text-lg">
+            <p>Total</p>
+            <p>$${total.toFixed(2)}</p>
+        </div>
+        <button class="mt-6 w-full bg-gray-700 text-white py-3 rounded-lg font-semibold hover:bg-blue-600">
+            Checkout
+        </button>
+    `;
 }
-    </script>
+
+// Function to remove item from cart
+function removeFromBag(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = cart.filter(product => product.id !== productId);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCart(); // Refresh the cart display
+}
+
+// Display cart items on page load
+window.onload = displayCart;
+
+
+
+</script>
 </body>
 </html>
